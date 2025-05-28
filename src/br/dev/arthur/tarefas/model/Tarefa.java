@@ -76,6 +76,10 @@ public class Tarefa {
 		
 		return status;
 	}
+	
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 
 
 }

@@ -8,27 +8,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 
+import br.dev.arthur.tarefas.dao.FuncionarioDAO;
 import br.dev.arthur.tarefas.model.Funcionario;
 import br.dev.arthur.tarefas.model.Status;
 import br.dev.arthur.tarefas.model.Tarefa;
+import br.dev.arthur.tarefas.utils.Utils;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Funcionario funcionario = new Funcionario("Paulo", "Programador");
+		Funcionario funcionario = new Funcionario("Thomas Turbando", "Programador");
+		funcionario.setSetor("Tecnologia da Informação");
+		funcionario.setSalario(6987.98);
 		
-		Tarefa tarefa = new Tarefa(funcionario);
-		tarefa.setNome("Lavar a louça");
-		tarefa.setDescricao("Lavar a louça antes de eu chegar");
-		tarefa.setDataInicio(LocalDate.of(2025, 05, 21));
-		tarefa.setPrazo(1);
-		tarefa.setStatus(Status.EM_ANDAMENTO);
+		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
+		dao.gravar();
 		
 		//testarLeituraEscritaArquivo();
 		
 	}
 
+	@SuppressWarnings("unused")
 	private static void testarLeituraEscritaArquivo() {
 		String so = System.getProperty("os.name");
 		System.out.println(so);
