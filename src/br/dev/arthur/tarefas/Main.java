@@ -6,24 +6,33 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
-
-import br.dev.arthur.tarefas.dao.FuncionarioDAO;
-import br.dev.arthur.tarefas.model.Funcionario;
-import br.dev.arthur.tarefas.model.Status;
-import br.dev.arthur.tarefas.model.Tarefa;
-import br.dev.arthur.tarefas.utils.Utils;
+//import java.time.LocalDate;
+//
+//import br.dev.arthur.tarefas.dao.FuncionarioDAO;
+//import br.dev.arthur.tarefas.model.Funcionario;
+//import br.dev.arthur.tarefas.model.Status;
+//import br.dev.arthur.tarefas.model.Tarefa;
+//import br.dev.arthur.tarefas.ui.FuncionarioFrame;
+//import br.dev.arthur.tarefas.ui.FuncionarioListaFrame;
+//import br.dev.arthur.tarefas.utils.Utils;
+import br.dev.arthur.tarefas.ui.GerenciadorFrame;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Funcionario funcionario = new Funcionario("Thomas Turbando", "Programador");
-		funcionario.setSetor("Tecnologia da Informação");
-		funcionario.setSalario(6987.98);
+//		FuncionarioDAO dao = new FuncionarioDAO(null);
+//		dao.getFuncionarios();
+//		new FuncionarioListaFrame();
+//		new FuncionarioFrame();
+		new GerenciadorFrame();
 		
-		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
-		dao.gravar();
+//		Funcionario funcionario = new Funcionario("Thomas Turbando", "Programador");
+//		funcionario.setSetor("Tecnologia da Informação");
+//		funcionario.setSalario(6987.98);
+//		
+//		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
+//		dao.gravar();
 		
 		//testarLeituraEscritaArquivo();
 		

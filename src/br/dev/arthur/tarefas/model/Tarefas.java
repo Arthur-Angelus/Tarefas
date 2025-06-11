@@ -2,17 +2,32 @@ package br.dev.arthur.tarefas.model;
 
 import java.time.LocalDate;
 
-public class Tarefa {
+import br.dev.arthur.tarefas.utils.Utils;
+
+public class Tarefas {
 
 	private String nome;
 	private String descricao;
+	private String codigo;
 	private Funcionario responsavel;
 	private LocalDate dataInicio;
 	private int prazo;
 	private LocalDate dataEntrega;
 	private Status status;
 	
-	public Tarefa(Funcionario responsavel) {
+	public Tarefas(String nome) {
+		setNome(nome);
+		setCodigo(Utils.gerarUUID8());
+		setResponsavel(responsavel);
+	}
+	
+	public Tarefas(String nome, String descricao) {
+		this.nome = nome;
+		this.descricao = descricao;
+		this.codigo = Utils.gerarUUID8();
+	}
+	
+	public Tarefas(Funcionario responsavel) {
 		this.responsavel = responsavel;
 	}
 
@@ -22,6 +37,14 @@ public class Tarefa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getDescricao() {
@@ -79,6 +102,12 @@ public class Tarefa {
 	
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+	
+	public String toString() {
+		return codigo + "," + nome + "," + descricao + "," + responsavel + 
+				"," + dataInicio + "," + prazo + 
+				"," + dataEntrega + "," + status + "\n";
 	}
 
 

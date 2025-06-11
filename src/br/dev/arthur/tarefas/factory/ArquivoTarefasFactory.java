@@ -6,9 +6,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ArquivoFuncionarioFactory {
+public class ArquivoTarefasFactory {
 	
-	private String caminho = "/Users/25132783/projetoTarefas/funcionarios.csv";
+	private String caminho = "/Users/25132783/projetoTarefas/tarefas.csv";
 	private FileWriter fw;
 	private BufferedWriter bw;
 	private FileReader fr;
@@ -30,4 +30,5 @@ public class ArquivoFuncionarioFactory {
 		return br;
 	}
 	
+
 }
