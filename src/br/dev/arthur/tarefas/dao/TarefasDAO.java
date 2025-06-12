@@ -14,12 +14,10 @@ import br.dev.arthur.tarefas.model.Tarefas;
 public class TarefasDAO {
 	
 	private Tarefas tarefa;
-	private Funcionario funcionario;
 	private ArquivoTarefasFactory ff = new ArquivoTarefasFactory();
 	
 	public void TarefaDAO(Tarefas tarefa, Funcionario funcionario) {
 		this.tarefa = tarefa;
-		this.funcionario = funcionario;
 	}
 	
 	public boolean gravar() {

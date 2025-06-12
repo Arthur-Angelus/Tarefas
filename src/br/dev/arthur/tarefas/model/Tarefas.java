@@ -16,7 +16,6 @@ public class Tarefas {
 	private Status status;
 	
 	public Tarefas(String nome) {
-		setNome(nome);
 		setCodigo(Utils.gerarUUID8());
 		setResponsavel(responsavel);
 	}
